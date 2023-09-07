@@ -5,7 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Cygaber&#39;s blog">
-    <meta name="description" content="CMake 学习1. 编辑CMakePresets.json和CMakeUserPresets.jsonCMakePresets.json 用于保存项目范围内的生成。 CMakeUserPresets.json 可供开发人员用来保存自己的本">
+    <meta name="description" content="Hexo使用_config.yml可以在_config.yml里修改大部分配置文件
+网站
+title:网站标题
+subtitile:网站副标题
+description:网站描述
+keywords:网站的关键词,支持多个关键词
+author:">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -312,7 +318,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-09-05
+                    2023-09-06
                 </div>
                 
 
@@ -333,39 +339,90 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="CMake-学习"><a href="#CMake-学习" class="headerlink" title="CMake 学习"></a>CMake 学习</h1><h2 id="1-编辑CMakePresets-json和CMakeUserPresets-json"><a href="#1-编辑CMakePresets-json和CMakeUserPresets-json" class="headerlink" title="1. 编辑CMakePresets.json和CMakeUserPresets.json"></a>1. 编辑CMakePresets.json和CMakeUserPresets.json</h2><p>CMakePresets.json 用于保存项目范围内的生成。 CMakeUserPresets.json 可供开发人员用来保存自己的本地生成。</p>
-<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"version"</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"configurePresets"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">{</span></span><br><span class="line">      <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"OpenGL项目"</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">"description"</span><span class="punctuation">:</span> <span class="string">"一个基本的OpenGL项目"</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">"hidden"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">"cacheVariables"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">        <span class="attr">"CMAKE_BUILD_TYPE"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">          <span class="attr">"description"</span><span class="punctuation">:</span> <span class="string">"构建类型"</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">"value"</span><span class="punctuation">:</span> <span class="string">"Debug"</span></span><br><span class="line">        <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">"CMAKE_EXPORT_COMPILE_COMMANDS"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">          <span class="attr">"description"</span><span class="punctuation">:</span> <span class="string">"生成编译命令"</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">"value"</span><span class="punctuation">:</span> <span class="string">"YES"</span></span><br><span class="line">        <span class="punctuation">}</span></span><br><span class="line">      <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">"cmakeCommandArgs"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">"sourceDirectory"</span><span class="punctuation">:</span> <span class="string">"${sourceDir}"</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">"buildDirectory"</span><span class="punctuation">:</span> <span class="string">"${sourceDir}/build"</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">"cacheInit"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">{</span></span><br><span class="line">          <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"CMAKE_CXX_STANDARD"</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">"value"</span><span class="punctuation">:</span> <span class="string">"11"</span></span><br><span class="line">        <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">{</span></span><br><span class="line">          <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"CMAKE_CXX_STANDARD_REQUIRED"</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">"value"</span><span class="punctuation">:</span> <span class="string">"YES"</span></span><br><span class="line">        <span class="punctuation">}</span></span><br><span class="line">      <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">"presets"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">{</span></span><br><span class="line">          <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"默认配置"</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">"hidden"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">"cacheVariables"</span><span class="punctuation">:</span> <span class="punctuation">{</span><span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">"cmakeCommandArgs"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">}</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">}</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">}</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+                <h1 id="Hexo使用"><a href="#Hexo使用" class="headerlink" title="Hexo使用"></a>Hexo使用</h1><h2 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>可以在_config.yml里修改大部分配置文件</p>
+<h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><ul>
+<li>title:网站标题</li>
+<li>subtitile:网站副标题</li>
+<li>description:网站描述</li>
+<li>keywords:网站的关键词,支持多个关键词</li>
+<li>author:你的名字</li>
+<li>language:网站使用的语言</li>
+<li>timezone:时区,一般用的是Asia或者Shanghai</li>
+</ul>
+<p>其中descrption主要用于seo,告诉搜索引擎一个简单的描述,author用于显示主题文章的作者</p>
+<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><ul>
+<li>url 网址,必须以http或者https开头</li>
+<li>root 网站根目录</li>
+<li>permalink 文章的永久连接格式</li>
+<li>permalink_defaults 永久链接中各部分的默认值</li>
+<li>pretty_urls.strailing_index 是否在永久链接中保留尾部的index.html 设置为false是去除,默认值为true</li>
+<li>pretty_urls.trailing_html 是否在永久链接中保留尾部的.html 设置为false是去除,对index.html无效,默认值为true</li>
+</ul>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li>source_dir 资源文件夹,这个文件夹来存放内容</li>
+<li>public_dir 公共文件夹,这个文件夹用于存放生成的站点文件</li>
+<li>tag_dir 标签文件夹</li>
+<li>archive_dir 归档文件夹</li>
+<li>category_dir 分类文件夹</li>
+<li>code_dir Include code文件夹,source_dir下的子目录</li>
+<li>i18n_dir 国际化(i18n)文件夹</li>
+<li>skip_render 跳过指定文件的渲染,匹配到文件将会不做改动的复制到 public 目录中,可以使用glob表达式来匹配路径</li>
+</ul>
+<p>对于hexo新手来说通常不建议动这一部分的值</p>
+<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><ul>
+<li>new_post_name 新文章的文件名称</li>
+<li>default_layout 预设布局</li>
+<li>auto_spacing 在中文英文之间加入空格</li>
+<li>titlecase 把标题转换为title case</li>
+<li>external_link 在新标签页打开链接</li>
+<li>external_link.enable 在新标签页打开链接</li>
+<li>external_link.field 对阵个网站(site)生效或者仅对文章(post)生效</li>
+<li>external_link.exclude 需要排除的域名,主域名和子域名如www需要分别配置</li>
+<li>filename_case 把文件名称转换为(1)小写或者(2)大写</li>
+<li>render_drafts 显示草稿</li>
+<li>post_asset_folder 启动Asset文件夹</li>
+<li>relative_link 把链接改为与根目录的相对位置</li>
+<li>future 显示未来的文章</li>
+<li>highlight 代码块的设置,参考Highlight.js进行设置</li>
+<li>prismjs 代码块的设置,参考PrismJS进行设置</li>
+</ul>
+<h2 id="分类-标签"><a href="#分类-标签" class="headerlink" title="分类 &amp;标签"></a>分类 &amp;标签</h2><ul>
+<li>default_category 默认分类 </li>
+<li>category_map 分类别名</li>
+<li>tag_map 标签别名</li>
+</ul>
+<h2 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期/时间格式"></a>日期/时间格式</h2><p>Hexo用Moment.js来解析和显示时间</p>
+<ul>
+<li>date_format 日期格式</li>
+<li>time_format 时间格式</li>
+<li>updated_option 当在Front Matter中没有指定<code>updated</code>时<code>updated</code>的取值</li>
+</ul>
+<p>updated_option<br>updated_option 控制了当Front Matter中没有指定时<code>updated</code>如何取值:</p>
+<ul>
+<li>mtime:使用文件的最后修改时间,是默认的设置</li>
+<li>date:使用date作为update的值.可以被用于Git工作流之中,因为使用Git管理站点时文件的追后秀爱日期常常会被改变</li>
+<li>empty:直接删除updated,使用这个选项可能会让大部分主题和插件无法工作</li>
+</ul>
+<h2 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h2><ul>
+<li>per_page 每页显示的文章量,0关闭分页功能</li>
+<li>pagination_dir 分页目录</li>
+</ul>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><ul>
+<li>theme 当前主题名称为<code>false</code>时禁用主题</li>
+<li>theme_config 主题的配置文件放在这里会覆盖主题目录下的 _config.yml 中的配置</li>
+<li>deploy 部署部分的设置</li>
+<li>meta_generator Meta generator标签,值为false时Hexo不会在头部插入该标签</li>
+</ul>
+<h2 id="包括或不包括目录和文件"><a href="#包括或不包括目录和文件" class="headerlink" title="包括或不包括目录和文件"></a>包括或不包括目录和文件</h2><p>在Hexo配置文件中,通过设置include/exclude可以让Hexo进行处理或忽略某些目录和文件夹,可以使用golb表达式对目录文件进行匹配</p>
+<p>include和exclude选项只会用于source 而ignore 选项会应用到所有文件夹</p>
+<ul>
+<li>include Hexo默认会不包括source/下的文件和文件夹(包括名称以<code>_</code>和<code>.</code>开头的文件和文件夹, Hexo的<code>_posts</code>和<code>_data</code>等目录除外)通过设置此字段使Hexo处理他们并将他们复制到source目录下</li>
+<li>exclude Hexo不包括<code>source/</code>下的这些文件和目录</li>
+<li>ignore Hexo会忽略整个Hexo项目下的这些文件夹或文件</li>
+</ul>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># 处理或不处理目录或文件</span><br><span class="line">include<span class="punctuation">:</span></span><br><span class="line">  - <span class="string">".nojekyll"</span></span><br><span class="line">  # 处理 'source/css/_typing.css'</span><br><span class="line">  - <span class="string">"css/_typing.css"</span></span><br><span class="line">  # 处理 'source/_css/' 中的任何文件，但不包括子目录及其其中的文件。</span><br><span class="line">  - <span class="string">"_css/*"</span></span><br><span class="line">  # 处理 'source/_css/' 中的任何文件和子目录下的任何文件</span><br><span class="line">  - <span class="string">"_css/**/*"</span></span><br><span class="line"></span><br><span class="line">exclude<span class="punctuation">:</span></span><br><span class="line">  # 不处理 'source/js/test.js'</span><br><span class="line">  - <span class="string">"js/test.js"</span></span><br><span class="line">  # 不处理 'source/js/' 中的文件、但包括子目录下的所有目录和文件</span><br><span class="line">  - <span class="string">"js/*"</span></span><br><span class="line">  # 不处理 'source/js/' 中的文件和子目录下的任何文件</span><br><span class="line">  - <span class="string">"js/**/*"</span></span><br><span class="line">  # 不处理 'source/js/' 目录下的所有文件名以 'test' 开头的文件，但包括其它文件和子目录下的单文件</span><br><span class="line">  - <span class="string">"js/test*"</span></span><br><span class="line">  # 不处理 'source/js/' 及其子目录中任何以 'test' 开头的文件</span><br><span class="line">  - <span class="string">"js/**/test*"</span></span><br><span class="line">  # 不要用 exclude 来忽略 'source/_posts/' 中的文件。你应该使用 'skip_render'，或者在要忽略的文件的文件名之前加一个下划线 '_'</span><br><span class="line">  # 在这里配置一个 - <span class="string">"_posts/hello-world.md"</span> 是没有用的。</span><br><span class="line"></span><br><span class="line">ignore<span class="punctuation">:</span></span><br><span class="line">  # 忽略任何一个名叫 'foo' 的文件夹</span><br><span class="line">  - <span class="string">"**/foo"</span></span><br><span class="line">  # 只忽略 'themes/' 下的 'foo' 文件夹</span><br><span class="line">  - <span class="string">"**/themes/*/foo"</span></span><br><span class="line">  # 对 'themes/' 目录下的每个文件夹中忽略名叫 'foo' 的子文件夹</span><br><span class="line">  - <span class="string">"**/themes/**/foo"</span></span><br></pre></td></tr></tbody></table></figure>
 
-<ol>
-<li>“version”:是CMake的版本号</li>
-<li>“configurePresets”:这是一个包含配置预设的数组，每个配置预设都是一个项目配置的定义</li>
-<li>“name”:这是配置预设的名称，用于在CMake Presets界面中标识配置</li>
-<li>“description”:对配置预设的描述,提供了关于配置的简要说明</li>
-<li>“hidden”:隐藏CMake Presets里面的配置,用户要显式的启用</li>
-<li>“cacheVariables”:包含CMake缓存变量的字典,用于指定构建选项’CMAKE_BUILD_TYPE’来指定构建类型为Debug’CMAKE_EXPORT_COMPILE_COMMANDS’用于生成编译指令</li>
-<li>“cmakeCommandArgs”:是一个可选数组用于传递给CMake命令的额外参数</li>
-<li>“sourceDirectory”:是项目源代码的目录路径,’${sourceDir}’是一个特殊的占位符,表示CMake使用的是项目的根目录</li>
-<li>“buildDirectory”;构建目录的路径</li>
-<li>“casheInit”:包含了初始化的CMake缓存变量的数组</li>
-<li>“presets”:这是一个包含了其他配置的预设的数组</li>
-</ol>
-<p>没有文件或者文件无效就会使用的是默认的预设配置</p>
-<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Windows示例</span></span><br><span class="line"><span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"windows-default"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"displayName"</span><span class="punctuation">:</span> <span class="string">"Windows x64 Debug"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"description"</span><span class="punctuation">:</span> <span class="string">"Sets Ninja generator, compilers, x64 architecture, build and install directory, debug build type"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"generator"</span><span class="punctuation">:</span> <span class="string">"Ninja"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"binaryDir"</span><span class="punctuation">:</span> <span class="string">"${sourceDir}/out/build/${presetName}"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"architecture"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"value"</span><span class="punctuation">:</span> <span class="string">"x64"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"strategy"</span><span class="punctuation">:</span> <span class="string">"external"</span></span><br><span class="line">  <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"cacheVariables"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"CMAKE_BUILD_TYPE"</span><span class="punctuation">:</span> <span class="string">"Debug"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"CMAKE_INSTALL_PREFIX"</span><span class="punctuation">:</span> <span class="string">"${sourceDir}/out/install/${presetName}"</span></span><br><span class="line">  <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vendor"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"microsoft.com/VisualStudioSettings/CMake/1.0"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">      <span class="attr">"hostOS"</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="string">"Windows"</span> <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">}</span></span><br><span class="line">  <span class="punctuation">}</span></span><br><span class="line"><span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">//Linux示例</span></span><br><span class="line"><span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"linux-default"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"displayName"</span><span class="punctuation">:</span> <span class="string">"Linux Debug"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"description"</span><span class="punctuation">:</span> <span class="string">"Sets Ninja generator, compilers, build and install directory, debug build type"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"generator"</span><span class="punctuation">:</span> <span class="string">"Ninja"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"binaryDir"</span><span class="punctuation">:</span> <span class="string">"${sourceDir}/out/build/${presetName}"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"cacheVariables"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"CMAKE_BUILD_TYPE"</span><span class="punctuation">:</span> <span class="string">"Debug"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"CMAKE_INSTALL_PREFIX"</span><span class="punctuation">:</span> <span class="string">"${sourceDir}/out/install/${presetName}"</span></span><br><span class="line">  <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vendor"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"microsoft.com/VisualStudioSettings/CMake/1.0"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">      <span class="attr">"hostOS"</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="string">"Linux"</span> <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"microsoft.com/VisualStudioRemoteSettings/CMake/1.0"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">      <span class="attr">"sourceDir"</span><span class="punctuation">:</span> <span class="string">"$env{HOME}/.vs/$ms{projectDirName}"</span></span><br><span class="line">   <span class="punctuation">}</span></span><br><span class="line">  <span class="punctuation">}</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>尝试打开或者修改不存在的CMakePresets.json文件,IDE会在项目根目录下自动创建具有默认配置预设的CMakePresets.json文件</p>
-<p>要是在Linux上不适用VisualC++工具集进行生成,指定<code>PATH</code>实例上的编译器名称,或计算结果为编译器完整路径的环境变量,不建议使用完整路径,以便文件可以共享</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"cacheVariables": {</span><br><span class="line">  "CMAKE_BUILD_TYPE": "Debug",</span><br><span class="line">  "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",</span><br><span class="line">  "CMAKE_C_COMPILER": "gcc-8",</span><br><span class="line">  "CMAKE_CXX_COMPILER": "g++-8"</span><br><span class="line">},</span><br></pre></td></tr></tbody></table></figure>
-
-<p>默认模板均将Ninja设定为默认的生成器,其他的常见的生成器也可以在配置<code>generator</code>指定新的生成器</p>
-<p>平台选择:默认平台名称是主机的名称,并在<code>CMAKE_VS_PLATFORM_NAME_DEFAULT</code>是多变的,<code>CMAKE_GENERATOR_PLATFORM</code>可以通过选项设置变脸过来指定目标平台名称.例如</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- cmake -G "Visual Studio 16 2019" -A Win32</span><br><span class="line">- cmake -G "Visual Studio 16 2019" -A x64</span><br><span class="line">- cmake -G "Visual Studio 16 2019" -A ARM64</span><br><span class="line">- cmake -G "Visual Studio 16 2019" -A ARM</span><br></pre></td></tr></tbody></table></figure>
-
-<p>在远程系统或者wsl上的<code>${sourceDir}</code>的计算结果是目标系统的项目源目录路径,不是本地计算机的项目源目录路径</p>
-<p>启用AddressSanitizer,这个选项是一个适用于Windows和Linux的C和C++的运行时内存错误检测器 CMakeSettings.json中的<code>addressSanitizerEnabled </code>选项可以启用这个选项,CMakePresets.json不支持这个选项.</p>
-<p>可以将下面的代码加入CMakeLists.txt中来为目标启用或者禁用相关程序</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">option(ASAN_ENABLED "Build this target with AddressSanitizer" ON)</span><br><span class="line"></span><br><span class="line">if(ASAN_ENABLED)</span><br><span class="line">  if(MSVC)</span><br><span class="line">    target_compile_options(&lt;target&gt; PUBLIC /fsanitize=address)</span><br><span class="line">  else()</span><br><span class="line">    target_compile_options(&lt;target&gt; PUBLIC -fsanitize=address &lt;additional-options&gt;)</span><br><span class="line">    target_link_options(&lt;target&gt; PUBLIC -fsanitize=address)</span><br><span class="line">  endif()</span><br><span class="line">endif()</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="CMakeLists-txt构建"><a href="#CMakeLists-txt构建" class="headerlink" title="CMakeLists.txt构建"></a>CMakeLists.txt构建</h2>
                 
             </div>
             <hr/>
@@ -391,7 +448,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cygaber.github.io/2023/09/05/CMake-learn/">https://cygaber.github.io/2023/09/05/CMake-learn/</a>
+                    <a href="https://cygaber.github.io/2023/09/06/hexo-learn/">https://cygaber.github.io/2023/09/06/hexo-learn/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -472,9 +529,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/09/06/hexo-learn/">
                     <div class="card-image">
@@ -492,9 +550,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -503,6 +561,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -513,13 +572,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/09/04/hello-world/">
+                <a href="/2023/09/05/CMake-learn/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -530,7 +589,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-05
                             </span>
                         <span class="publish-author">
                             
