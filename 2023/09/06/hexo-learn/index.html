@@ -340,7 +340,7 @@ author:">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Hexo使用"><a href="#Hexo使用" class="headerlink" title="Hexo使用"></a>Hexo使用</h1><h2 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>可以在_config.yml里修改大部分配置文件</p>
-<h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><ul>
+<h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><ul>
 <li>title:网站标题</li>
 <li>subtitile:网站副标题</li>
 <li>description:网站描述</li>
@@ -350,7 +350,7 @@ author:">
 <li>timezone:时区,一般用的是Asia或者Shanghai</li>
 </ul>
 <p>其中descrption主要用于seo,告诉搜索引擎一个简单的描述,author用于显示主题文章的作者</p>
-<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><ul>
+<h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><ul>
 <li>url 网址,必须以http或者https开头</li>
 <li>root 网站根目录</li>
 <li>permalink 文章的永久连接格式</li>
@@ -358,7 +358,7 @@ author:">
 <li>pretty_urls.strailing_index 是否在永久链接中保留尾部的index.html 设置为false是去除,默认值为true</li>
 <li>pretty_urls.trailing_html 是否在永久链接中保留尾部的.html 设置为false是去除,对index.html无效,默认值为true</li>
 </ul>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
 <li>source_dir 资源文件夹,这个文件夹来存放内容</li>
 <li>public_dir 公共文件夹,这个文件夹用于存放生成的站点文件</li>
 <li>tag_dir 标签文件夹</li>
@@ -369,7 +369,7 @@ author:">
 <li>skip_render 跳过指定文件的渲染,匹配到文件将会不做改动的复制到 public 目录中,可以使用glob表达式来匹配路径</li>
 </ul>
 <p>对于hexo新手来说通常不建议动这一部分的值</p>
-<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><ul>
+<h3 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h3><ul>
 <li>new_post_name 新文章的文件名称</li>
 <li>default_layout 预设布局</li>
 <li>auto_spacing 在中文英文之间加入空格</li>
@@ -386,12 +386,12 @@ author:">
 <li>highlight 代码块的设置,参考Highlight.js进行设置</li>
 <li>prismjs 代码块的设置,参考PrismJS进行设置</li>
 </ul>
-<h2 id="分类-标签"><a href="#分类-标签" class="headerlink" title="分类 &amp;标签"></a>分类 &amp;标签</h2><ul>
+<h3 id="分类-标签"><a href="#分类-标签" class="headerlink" title="分类 &amp;标签"></a>分类 &amp;标签</h3><ul>
 <li>default_category 默认分类 </li>
 <li>category_map 分类别名</li>
 <li>tag_map 标签别名</li>
 </ul>
-<h2 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期/时间格式"></a>日期/时间格式</h2><p>Hexo用Moment.js来解析和显示时间</p>
+<h3 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期/时间格式"></a>日期/时间格式</h3><p>Hexo用Moment.js来解析和显示时间</p>
 <ul>
 <li>date_format 日期格式</li>
 <li>time_format 时间格式</li>
@@ -403,17 +403,17 @@ author:">
 <li>date:使用date作为update的值.可以被用于Git工作流之中,因为使用Git管理站点时文件的追后秀爱日期常常会被改变</li>
 <li>empty:直接删除updated,使用这个选项可能会让大部分主题和插件无法工作</li>
 </ul>
-<h2 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h2><ul>
+<h3 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h3><ul>
 <li>per_page 每页显示的文章量,0关闭分页功能</li>
 <li>pagination_dir 分页目录</li>
 </ul>
-<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><ul>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><ul>
 <li>theme 当前主题名称为<code>false</code>时禁用主题</li>
 <li>theme_config 主题的配置文件放在这里会覆盖主题目录下的 _config.yml 中的配置</li>
 <li>deploy 部署部分的设置</li>
 <li>meta_generator Meta generator标签,值为false时Hexo不会在头部插入该标签</li>
 </ul>
-<h2 id="包括或不包括目录和文件"><a href="#包括或不包括目录和文件" class="headerlink" title="包括或不包括目录和文件"></a>包括或不包括目录和文件</h2><p>在Hexo配置文件中,通过设置include/exclude可以让Hexo进行处理或忽略某些目录和文件夹,可以使用golb表达式对目录文件进行匹配</p>
+<h3 id="包括或不包括目录和文件"><a href="#包括或不包括目录和文件" class="headerlink" title="包括或不包括目录和文件"></a>包括或不包括目录和文件</h3><p>在Hexo配置文件中,通过设置include/exclude可以让Hexo进行处理或忽略某些目录和文件夹,可以使用golb表达式对目录文件进行匹配</p>
 <p>include和exclude选项只会用于source 而ignore 选项会应用到所有文件夹</p>
 <ul>
 <li>include Hexo默认会不包括source/下的文件和文件夹(包括名称以<code>_</code>和<code>.</code>开头的文件和文件夹, Hexo的<code>_posts</code>和<code>_data</code>等目录除外)通过设置此字段使Hexo处理他们并将他们复制到source目录下</li>
@@ -422,6 +422,46 @@ author:">
 </ul>
 <figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># 处理或不处理目录或文件</span><br><span class="line">include<span class="punctuation">:</span></span><br><span class="line">  - <span class="string">".nojekyll"</span></span><br><span class="line">  # 处理 'source/css/_typing.css'</span><br><span class="line">  - <span class="string">"css/_typing.css"</span></span><br><span class="line">  # 处理 'source/_css/' 中的任何文件，但不包括子目录及其其中的文件。</span><br><span class="line">  - <span class="string">"_css/*"</span></span><br><span class="line">  # 处理 'source/_css/' 中的任何文件和子目录下的任何文件</span><br><span class="line">  - <span class="string">"_css/**/*"</span></span><br><span class="line"></span><br><span class="line">exclude<span class="punctuation">:</span></span><br><span class="line">  # 不处理 'source/js/test.js'</span><br><span class="line">  - <span class="string">"js/test.js"</span></span><br><span class="line">  # 不处理 'source/js/' 中的文件、但包括子目录下的所有目录和文件</span><br><span class="line">  - <span class="string">"js/*"</span></span><br><span class="line">  # 不处理 'source/js/' 中的文件和子目录下的任何文件</span><br><span class="line">  - <span class="string">"js/**/*"</span></span><br><span class="line">  # 不处理 'source/js/' 目录下的所有文件名以 'test' 开头的文件，但包括其它文件和子目录下的单文件</span><br><span class="line">  - <span class="string">"js/test*"</span></span><br><span class="line">  # 不处理 'source/js/' 及其子目录中任何以 'test' 开头的文件</span><br><span class="line">  - <span class="string">"js/**/test*"</span></span><br><span class="line">  # 不要用 exclude 来忽略 'source/_posts/' 中的文件。你应该使用 'skip_render'，或者在要忽略的文件的文件名之前加一个下划线 '_'</span><br><span class="line">  # 在这里配置一个 - <span class="string">"_posts/hello-world.md"</span> 是没有用的。</span><br><span class="line"></span><br><span class="line">ignore<span class="punctuation">:</span></span><br><span class="line">  # 忽略任何一个名叫 'foo' 的文件夹</span><br><span class="line">  - <span class="string">"**/foo"</span></span><br><span class="line">  # 只忽略 'themes/' 下的 'foo' 文件夹</span><br><span class="line">  - <span class="string">"**/themes/*/foo"</span></span><br><span class="line">  # 对 'themes/' 目录下的每个文件夹中忽略名叫 'foo' 的子文件夹</span><br><span class="line">  - <span class="string">"**/themes/**/foo"</span></span><br></pre></td></tr></tbody></table></figure>
 
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><pre><code>hexo init [folder]
+</code></pre>
+<p>新建一个网站,如果没有设置<code>folder</code>Hexo在目前默认文件夹建立网站</p>
+<pre><code>hexo new [layout] &lt;title&gt;
+</code></pre>
+<p>新建一篇文章.如果没有设置<code>layout</code>的话,默认使用 <code>_config.yml</code>中的<code>default_layout</code>参数来代替,如果包含空格的话使用引号括起来</p>
+<ul>
+<li><code>-p</code>,<code>--path</code> 自定义新文章的路径</li>
+<li><code>-r</code>,<code>--replace</code> 如果存在同名文章,将其替换</li>
+<li><code>-s</code>,<code>--slug</code> 文章的Slug,作为新文章的文件名和发布后的URL</li>
+</ul>
+<p>默认情况下Hexo会使用文章的标题来决定文章的路径.对于独立页面来说,Hexo会创建一个以标题为名字的目录,并在目录中放置一个<code>index.md</code>文件.可以使用<code>--path</code>参数来覆盖上述行为,自行决定文件目录</p>
+<p>注意!!! title必须是指定的</p>
+<pre><code>hexo generate
+</code></pre>
+<p>生成静态文件</p>
+<ul>
+<li><code>-d</code>,<code>--deploy</code>  文件生成后立即部署网站</li>
+<li><code>-w</code>,<code>--watch</code> 监视文件变动</li>
+<li><code>-b</code>,<code>--bail</code> 生成过程中如果发生任何未处理的异常则抛出异常</li>
+<li><code>-f</code>,<code>--force</code> 强制重新生成文件Hexo引入了差分机制,如果<code>public</code>目录存在,那么<code>hexo g</code>指挥重新生成改动的文件 使用该参数的效果接近<code>hexo clean &amp;&amp; hexo generate</code></li>
+<li><code>-c</code>,<code>--concurrency</code> 最大同时生成文件的数量,默认无限制</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发表草稿</p>
+<pre><code>hexo server
+</code></pre>
+<p>启动服务器,默认情况下,访问网址为:<code>http://localhost:4000/</code></p>
+<ul>
+<li><code>-p</code>,<code>--port</code> 重设端口</li>
+<li><code>-s</code>,<code>--static</code> 只使用静态文件</li>
+<li><code>-l</code>,<code>--log</code> 启动日记记录,使用覆盖记录格式</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+
+<p>部署网站</p>
+<ul>
+<li><code>-g</code>,<code>--generate</code> 部署之前预先生成的静态文件</li>
+</ul>
 
                 
             </div>
